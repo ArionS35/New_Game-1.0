@@ -1,10 +1,14 @@
 var newX =0;
 
+function preload(){
+  p_walking1= loadImage("images/shooter_player (1).png")
+}
 function setup(){
   var canvas=createCanvas(displayWidth,displayHeight);
 
   platformGroup= new Group()
   player= new Player()
+  ground= new Ground()
   for(var i=0; i<24; i++){
     platform= new Platform(newX)
     newX= newX+platform.width
